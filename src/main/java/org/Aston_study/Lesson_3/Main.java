@@ -1,4 +1,4 @@
-package org.example;
+package org.Aston_study.Lesson_3;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
