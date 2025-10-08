@@ -1,4 +1,4 @@
-package org.example;
+package org.Aston_study.Lesson_2;
 import java.util.Arrays;
 
 public class Main {
