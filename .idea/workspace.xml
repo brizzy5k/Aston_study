@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Bowl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/CatsArrayAndBowl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/GeometricFigure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +71,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.CatsArrayAndBowl.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main2.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
