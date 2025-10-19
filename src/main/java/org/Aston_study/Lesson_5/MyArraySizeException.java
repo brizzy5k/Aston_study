@@ -1,4 +1,7 @@
 package org.Aston_study.Lesson_5;
 
-public class MyArraySizeException {
+class MyArraySizeException extends Exception {
+    public MyArraySizeException(String message) {
+        super(message);
+    }
 }
