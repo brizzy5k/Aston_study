@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_6/task_1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_6/task_1/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_6/task_2/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_6/task_2/PhoneDirectory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/CheckMyArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/CheckMyArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/MyArrayDataException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/MyArrayDataException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/MyArraySizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/MyArraySizeException.java" afterDir="false" />
-    </list>
+    <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +20,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
