@@ -9,7 +9,7 @@ public class Dog extends Animal {
         incrementCounters();
     }
 
-    void run(int distance) {
+    public void run(int distance) {
         if(distance<runMaxDistance) {
             System.out.println("Собака " + this.name + " пробежала " + distance + " м");
         }else{
@@ -18,7 +18,7 @@ public class Dog extends Animal {
     }
 
 
-    void swim(int distance) {
+    public void swim(int distance) {
         if(distance<swimMaxDistance) {
             System.out.println("Собака " + this.name + " проплыла " + distance + " м");
         }else{

@@ -5,19 +5,18 @@ public class Bowl {
     int bowlId;
 
 
-    Bowl(int id, int food){
+    public Bowl(int id, int food){
         this.bowlId=id;
         this.foodCount=food;
-
     }
 
-    void fillBowl(int food){
+    public void fillBowl(int food){
         this.foodCount+=food;
         System.out.println("В миску №" + bowlId + " положили "+ food + " еды. Теперь в миске: " + foodCount + " еды");
 
     }
 
-    void checkFoodInBowl(){
+    public void checkFoodInBowl(){
         if (foodCount>0) {
             System.out.println("В миске №" + this.bowlId + ": " + this.foodCount + " еды");
         }else {

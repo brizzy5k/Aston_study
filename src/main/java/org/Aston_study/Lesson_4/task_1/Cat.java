@@ -16,7 +16,7 @@ final int runMaxDistance = 200;
         incrementCounters();
     }
 
-    void run(int distance) {
+    public void run(int distance) {
         if(distance<runMaxDistance) {
             System.out.println("Кот " + this.name + " пробежал " + distance + " м");
         }else{
@@ -24,7 +24,7 @@ final int runMaxDistance = 200;
         }
     }
 
-    void swim(int distance) {
+    public void swim(int distance) {
         System.out.println("Кот " + this.name + " не умеет плавать" );
     }
 
@@ -38,7 +38,7 @@ final int runMaxDistance = 200;
         }
     }
 
-    void eatFromBowl(Bowl bowl){
+    public void eatFromBowl(Bowl bowl){
 
         if (isFed){
             System.out.println("Кот " + this.name + " уже сыт и не хочет есть");
