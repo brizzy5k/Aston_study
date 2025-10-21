@@ -2,6 +2,7 @@ package org.Aston_study.Lesson_3;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.SortedMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -57,25 +58,42 @@ public class Main {
 
         //##############################Задание №3##############################
         System.out.println("##############################Задание №3##############################");
-        Park park1 = new Park("Disney","France");
-        Park park2 = new Park("Диво-остров", "Russia");
 
-        Park.Attraction attraction1 = park1.new Attraction(
-                "Американские горки",
+        System.out.println("==========Список аттракционов для парка Веселый Остров==========");
+        Park park1 = new Park("Веселый Остров", "Москва");
+        park1.addAttraction("Американские горки",
                 LocalTime.of(10, 0),
                 LocalTime.of(20, 0),
-                150.00
-        );
+                350.0);
+        park1.addAttraction("Колесо обозрения",
+                LocalTime.of(9, 0),
+                LocalTime.of(22, 0),
+                200.0);
 
-        Park.Attraction attraction2 = park2.new Attraction(
-                "Американские горки",
+        for (Park.Attraction attraction : park1.getListOfAttractions()) {
+            attraction.printAttractionInfo();
+        }
+
+        System.out.println("==========Список аттракционов для парка Диво Остров==========");
+        Park park2 = new Park("Диво Остров", "Санкт-Петербург");
+        park2.addAttraction("Американские горки",
                 LocalTime.of(10, 0),
                 LocalTime.of(20, 0),
-                150.00
-        );
+                350.0);
 
-        attraction1.printAttractionInfo();
-        attraction2.printAttractionInfo();
+        park2.addAttraction("Колесо обозрения",
+                LocalTime.of(9, 0),
+                LocalTime.of(22, 0),
+                200.0);
+
+        park2.addAttraction("Тарзанка",
+                LocalTime.of(9, 0),
+                LocalTime.of(18, 0),
+                500.0);
+
+        for (Park.Attraction attraction : park2.getListOfAttractions()) {
+            attraction.printAttractionInfo();
+        }
     }
 
 }
