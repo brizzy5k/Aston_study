@@ -1,9 +1,7 @@
 package org.Aston_study.Lesson_4.task_2;
 
-public interface GeometricFigure {
-    String COLOR_RED = "Красный";
-    String COLOR_BLUE = "Синий";
-    String COLOR_GREEN = "Зеленый";
+public interface CalculationGeometricFigure {
+
 
     double calculateSquare();
     String getFillColor();
