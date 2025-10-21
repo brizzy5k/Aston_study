@@ -57,7 +57,8 @@ public class Main {
 
         //##############################Задание №3##############################
         System.out.println("##############################Задание №3##############################");
-        Park park1 = new Park();
+        Park park1 = new Park("Disney","France");
+        Park park2 = new Park("Диво-остров", "Russia");
 
         Park.Attraction attraction1 = park1.new Attraction(
                 "Американские горки",
@@ -66,7 +67,15 @@ public class Main {
                 150.00
         );
 
+        Park.Attraction attraction2 = park2.new Attraction(
+                "Американские горки",
+                LocalTime.of(10, 0),
+                LocalTime.of(20, 0),
+                150.00
+        );
+
         attraction1.printAttractionInfo();
+        attraction2.printAttractionInfo();
     }
 
 }
