@@ -16,6 +16,6 @@ public abstract class Animal {
         System.out.println("Собак: " + dogCount);
     }
 
-    abstract void run(int distance);
-    abstract void swim(int distance);
+    public abstract void run(int distance);
+    public abstract void swim(int distance);
 }
