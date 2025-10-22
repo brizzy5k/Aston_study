@@ -37,14 +37,12 @@ public class Main {
     }
 
     public static void printColor(){
-        int value=101;
-        if (value<=0){
+        int value = 101;
+        if (value <= 0) {
             System.out.println("Красный");
-        }
-        if ( 0 <value && value <= 100){
-            System.out.println("Желтый");
-        }
-        if (value>100){
+        } else if (value <= 100) {
+            System.out.println("Желтый");
+        } else {
             System.out.println("Зеленый");
         }
     }
@@ -59,12 +57,9 @@ public class Main {
     }
 
     public static boolean checkSumInterval(int a,int b){
-        if(a + b <= 20 && a + b > 10) {
-            System.out.println("True");
-            return true;
-        }
-        System.out.println("false");
-        return false;
+        boolean result = (a + b <= 20 && a + b > 10);
+        System.out.println(result);
+        return result;
     }
 
     public static void checkNumberPositiveSign(int value){
@@ -76,12 +71,9 @@ public class Main {
     }
 
     public static boolean checkNumberNegativeSign(int value){
-        if (value<0){
-            System.out.println("True");
-            return true;
-        }
-        System.out.println("False");
-        return false;
+        boolean isNegative = (value < 0);
+        System.out.println(isNegative);
+        return isNegative;
     }
 
     public static void printStringTimes(String s, int value){
@@ -91,12 +83,9 @@ public class Main {
     }
 
     public static boolean checkLeapYear(int year){
-        if ((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)){
-            System.out.println("True");
-            return true;
-        }
-        System.out.println("False");
-        return false;
+        boolean isLeap = (year % 4 == 0) && (year % 100 != 0 || year % 400 == 0);
+        System.out.println(isLeap);
+        return isLeap;
     }
 
     public static void arrayConvert(){
