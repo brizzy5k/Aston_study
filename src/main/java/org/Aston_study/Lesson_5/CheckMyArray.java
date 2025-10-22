@@ -2,7 +2,6 @@ package org.Aston_study.Lesson_5;
 
 public class CheckMyArray {
     public static void checkArraySize(String[][] array) throws MyArraySizeException {
-
         if (array.length != 4) {
             throw new MyArraySizeException("Недопустимое количество строк.");
         }
@@ -17,14 +16,11 @@ public class CheckMyArray {
         System.out.println("Размер массива корректен (4x4).");
     }
 
-
-    public static void checkArrayAndSum(String[][] array) throws MyArraySizeException,MyArrayDataException{
-        int sum=0;
-
+    public static void checkArrayAndSum(String[][] array) throws MyArraySizeException, MyArrayDataException {
+        int sum = 0;
         checkArraySize(array);
-
-        for (int i = 0; i < array.length; i++){
-            for (int j = 0; j < array[i].length; j++){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
                 try {
                     sum += Integer.parseInt(array[i][j]);
                 } catch (NumberFormatException e) {
@@ -34,7 +30,6 @@ public class CheckMyArray {
                 }
             }
         }
-
         System.out.println("Сумма массива = " + sum);
     }
 }

@@ -1,6 +1,5 @@
 package org.Aston_study.Lesson_5;
 
-
 import static org.Aston_study.Lesson_5.CheckMyArray.checkArrayAndSum;
 import static org.Aston_study.Lesson_5.CheckMyArray.checkArraySize;
 
@@ -44,24 +43,18 @@ public class Main {
             //checkArrayAndSum(arr4);
 
 
-        }catch (MyArraySizeException | MyArrayDataException e){
+        } catch (MyArraySizeException | MyArrayDataException e) {
             e.printStackTrace();
 
         }
 
         try {
-            int[] arr5 = {1,2,3,4};
+            int[] arr5 = {1, 2, 3, 4};
             System.out.println(arr5[5]);
-        }catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
 
         }
-
         System.out.println("Конец программы");
-
     }
-
-
-
-
 }
