@@ -38,7 +38,6 @@ public class Student {
                 name, group, course, calculateAverageGrade());
     }
 
-
     public static void printStudents(Set<Student> students, int course) {
         System.out.println("Студенты " + course + " курса:");
         boolean found = false;

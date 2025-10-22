@@ -50,7 +50,6 @@ public class Main {
             System.out.println(student);
         }
 
-
         System.out.println("===============================================================");
         promoteSuccessfulStudents(students);
         System.out.println("После перевода на следующий курс:");
@@ -58,15 +57,10 @@ public class Main {
             System.out.println(student);
         }
 
-
         System.out.println("===============================================================");
         printStudents(students, 1);
         printStudents(students, 2);
         printStudents(students, 3);
         printStudents(students, 4);
-
-
-
-
     }
 }
