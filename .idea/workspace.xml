@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/GeometryFigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Bowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Bowl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/CatsArrayAndBowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/CatsArrayAndBowl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/CalculationGeometricFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/CalculationGeometricFigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/GeometricFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/CalculationGeometricFigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/GeometryFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/GeometryFigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_4/task_2/Triangle.java" afterDir="false" />
@@ -86,10 +92,20 @@
       <option name="presentableId" value="Default" />
       <updated>1759881976988</updated>
     </task>
+    <task id="LOCAL-00001" summary="Lesson_7 initial commit">
+      <option name="closed" value="true" />
+      <created>1761147359724</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761147359724</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesson_3 start commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson_3 start commit" />
+    <MESSAGE value="Lesson_7 initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson_7 initial commit" />
   </component>
 </project>

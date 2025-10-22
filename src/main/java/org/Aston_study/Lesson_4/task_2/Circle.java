@@ -3,7 +3,6 @@ package org.Aston_study.Lesson_4.task_2;
 public class Circle extends GeometryFigure {
     private double radius;
 
-
     public Circle(double radius, String fillColor, String borderColor) {
         super(fillColor, borderColor);
         this.radius = radius;
@@ -15,7 +14,7 @@ public class Circle extends GeometryFigure {
     }
 
     @Override
-    public double calculatePerimeter(){
+    public double calculatePerimeter() {
         return 2 * Math.PI * radius;
     }
 

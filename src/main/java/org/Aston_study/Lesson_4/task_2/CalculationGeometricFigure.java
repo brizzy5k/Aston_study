@@ -2,13 +2,13 @@ package org.Aston_study.Lesson_4.task_2;
 
 public interface CalculationGeometricFigure {
 
-
     double calculateSquare();
+
     String getFillColor();
+
     String getBorderColor();
+
     double calculatePerimeter();
-
-
 
     default void printInfo() {
         System.out.println("----- " + this.getClass().getSimpleName() + " -----");

@@ -4,7 +4,6 @@ public class Rectangle extends GeometryFigure {
     private double height;
     private double width;
 
-
     public Rectangle(double width, double height, String fillColor, String borderColor) {
         super(fillColor, borderColor);
         this.width = width;
@@ -17,20 +16,9 @@ public class Rectangle extends GeometryFigure {
     }
 
     @Override
-    public String getFillColor() {
-        return fillColor;
-    }
-
-    @Override
-    public String getBorderColor() {
-        return borderColor;
-    }
-
-    @Override
     public double calculatePerimeter() {
-        return 2*(width+height);
+        return 2 * (width + height);
     }
-
 
     public double getWidth() {
         return width;

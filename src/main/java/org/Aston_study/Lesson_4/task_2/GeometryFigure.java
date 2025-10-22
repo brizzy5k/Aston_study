@@ -8,7 +8,9 @@ public abstract class GeometryFigure implements CalculationGeometricFigure {
         this.fillColor = fillColor;
         this.borderColor = borderColor;
     }
+
     public abstract double calculateSquare();
+
     public abstract double calculatePerimeter();
 
     @Override
@@ -20,5 +22,4 @@ public abstract class GeometryFigure implements CalculationGeometricFigure {
     public String getBorderColor() {
         return borderColor;
     }
-
 }
