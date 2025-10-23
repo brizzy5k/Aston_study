@@ -9,7 +9,6 @@ import static org.Aston_study.Lesson_6.task_1.Student.*;
 @Data
 public class Main {
     public static void main(String[] args) {
-
         Set<Student> students = new HashSet<>();
 
         students.add(new Student("Иван Иванов", "ИКПИ-11", 1,
@@ -30,7 +29,6 @@ public class Main {
         students.add(new Student("Галина Сергеевна", "ИТП-31", 3,
                 Map.of("Математика", 4, "Физика", 4, "Химия", 4)));
 
-
         System.out.println("Исходный список студентов:");
         for (Student student : students) {
             System.out.println(student);
@@ -41,7 +39,6 @@ public class Main {
         printStudents(students, 2);
         printStudents(students, 3);
         printStudents(students, 4);
-
 
         removeFailedStudents(students);
         System.out.println("===============================================================");
