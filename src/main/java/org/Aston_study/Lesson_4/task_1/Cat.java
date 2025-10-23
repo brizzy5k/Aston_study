@@ -5,14 +5,7 @@ public class Cat extends Animal {
 
     public Cat(String name) {
         this.name = name;
-        this.isFed = true;
-        incrementCounters();
-    }
-
-    public Cat(String name, int hungerCount) {
-        this.name = name;
-        this.hungerCount = hungerCount;
-        this.isFed = (hungerCount == 0);
+        this.isFed = false;
         incrementCounters();
     }
 
@@ -38,7 +31,8 @@ public class Cat extends Animal {
         }
     }
 
-    public void eatFromBowl(Bowl bowl) {
+    public void eatFromBowl(Bowl bowl, int catHungerCount) {
+        this.hungerCount = catHungerCount;
         if (isFed) {
             System.out.println("Кот " + this.name + " уже сыт и не хочет есть");
             return;
@@ -53,7 +47,6 @@ public class Cat extends Animal {
         } else {
             System.out.println("В миске не хватает еды. Добавьте еще: " + (this.hungerCount - bowl.foodCount));
         }
-
     }
 
     private void incrementCounters() {

@@ -12,9 +12,9 @@ public class Main {
         dog1.run(600);
         dog1.swim(10);
 
-        Cat cat2 = new Cat("Борис", 10);
+        Cat cat2 = new Cat("Борис");
         // cat2.catInfo();
-        cat2.eatFromBowl(bowl1);
+        cat2.eatFromBowl(bowl1,10);
         bowl1.fillBowl(20);
 
         Animal.printAnimalCount();
