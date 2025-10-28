@@ -1,6 +1,5 @@
 package org.Aston_study.Lesson_3;
 
-
 import java.time.LocalTime;
 import java.util.Arrays;
 
@@ -66,8 +65,4 @@ public class Park {
         }
 
     }
-
-
-
-
 }
