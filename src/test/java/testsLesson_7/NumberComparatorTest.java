@@ -1,3 +1,5 @@
+package testsLesson_7;
+
 import org.Aston_study.Lesson_7.NumberComparator;
 import org.junit.jupiter.api.Test;
 

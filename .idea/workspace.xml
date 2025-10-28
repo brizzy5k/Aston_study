@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_7/ArithmeticOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_7/NumberComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_7/TriangleSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ArithmeticOperationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FactorialTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/NumberComparatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TriangleSquareTest.java" afterDir="false" />
+    <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="Еще пару пробелов лишних убрал">
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/DeleteRequestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/GetRequestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/PatchRequestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/PostFormDataRequestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/PostRawTextRequestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/PutRequestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_10_2025_1_21_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_10_2025_1_21__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_7/Factorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArithmeticOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_7/ArithmeticOperationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FactorialTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_7/FactorialTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/NumberComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_7/NumberComparatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TriangleSquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_7/TriangleSquareTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,15 +82,22 @@
     "Application.NumberComparator.executor": "Run",
     "Application.TriangleSquare.executor": "Run",
     "JUnit.ArithmeticOperationTest.executor": "Run",
+    "JUnit.DeleteRequestTest.executor": "Run",
     "JUnit.FactorialTest.executor": "Run",
+    "JUnit.GetRequestTest.executor": "Run",
     "JUnit.NumberComparatorTest.executor": "Run",
+    "JUnit.PatchRequestTest.executor": "Run",
+    "JUnit.PostFormDataRequestTest.executor": "Run",
+    "JUnit.PostRawTextRequestTest.executor": "Run",
+    "JUnit.PostRequestTest.executor": "Run",
+    "JUnit.PutRequestTest.executor": "Run",
     "JUnit.TriangleSquareTest.calculateBySides_invalid.executor": "Run",
     "JUnit.TriangleSquareTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Lesson__7",
+    "git-widget-placeholder": "Lesson__8",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/iliya/IdeaProjects/Aston_study/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
@@ -102,8 +114,8 @@
   <component name="RunManager">
     <configuration name="TriangleSquareTest.calculateBySides_invalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aston_study" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TriangleSquareTest" />
+      <option name="PACKAGE_NAME" value="testsLesson_8" />
+      <option name="MAIN_CLASS_NAME" value="testsLesson_7.TriangleSquareTest" />
       <option name="METHOD_NAME" value="calculateBySides_invalid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -124,6 +136,15 @@
       <option name="presentableId" value="Default" />
       <updated>1759881976988</updated>
     </task>
+    <task id="LOCAL-00001" summary="Еще пару пробелов лишних убрал">
+      <option name="closed" value="true" />
+      <created>1761261654265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761261654265</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +160,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesson_3 start commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson_3 start commit" />
+    <MESSAGE value="Еще пару пробелов лишних убрал" />
+    <option name="LAST_COMMIT_MESSAGE" value="Еще пару пробелов лишних убрал" />
   </component>
 </project>
