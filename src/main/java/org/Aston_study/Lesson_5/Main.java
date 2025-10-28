@@ -4,7 +4,6 @@ import static org.Aston_study.Lesson_5.CheckMyArray.checkArrayAndSum;
 import static org.Aston_study.Lesson_5.CheckMyArray.checkArraySize;
 
 public class Main {
-
     public static void main(String[] args) {
         String[][] arr1 = {
                 {"1", "2", "3", "4"},
@@ -36,16 +35,12 @@ public class Main {
             //checkArraySize(arr1);
             //checkArraySize(arr2);
             //checkArraySize(arr3);
-
             checkArrayAndSum(arr1);
             //checkArrayAndSum(arr2);
             //checkArrayAndSum(arr3);
             //checkArrayAndSum(arr4);
-
-
         } catch (MyArraySizeException | MyArrayDataException e) {
             e.printStackTrace();
-
         }
 
         try {
@@ -53,7 +48,6 @@ public class Main {
             System.out.println(arr5[5]);
         } catch (ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
-
         }
         System.out.println("Конец программы");
     }
