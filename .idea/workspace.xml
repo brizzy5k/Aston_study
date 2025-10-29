@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="Еще пару пробелов лишних убрал">
-      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/DeleteRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/GetRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/PatchRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/PostFormDataRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/PostRawTextRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_8/PutRequestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_10_2025_1_21_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_10_2025_1_21__Changes_.xml" beforeDir="false" />
+    <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_9/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_9/CheckTheBlockNameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_9/PaymentFormTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_9/PaymentLogosTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_9/ServiceDetailsLinkTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ArithmeticOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_7/ArithmeticOperationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FactorialTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_7/FactorialTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/NumberComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_7/NumberComparatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TriangleSquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_7/TriangleSquareTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Lesson_6" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -81,23 +79,30 @@
     "Application.Main2.executor": "Run",
     "Application.NumberComparator.executor": "Run",
     "Application.TriangleSquare.executor": "Run",
+    "Application.WebDriverExample.executor": "Run",
     "JUnit.ArithmeticOperationTest.executor": "Run",
+    "JUnit.CheckTheBlockNameTest.executor": "Run",
+    "JUnit.ChromeTest.executor": "Run",
     "JUnit.DeleteRequestTest.executor": "Run",
     "JUnit.FactorialTest.executor": "Run",
     "JUnit.GetRequestTest.executor": "Run",
     "JUnit.NumberComparatorTest.executor": "Run",
+    "JUnit.OnlineReplenishmentTest.executor": "Run",
     "JUnit.PatchRequestTest.executor": "Run",
+    "JUnit.PaymentFormTest.executor": "Run",
+    "JUnit.PaymentLogosTest.executor": "Run",
     "JUnit.PostFormDataRequestTest.executor": "Run",
     "JUnit.PostRawTextRequestTest.executor": "Run",
     "JUnit.PostRequestTest.executor": "Run",
     "JUnit.PutRequestTest.executor": "Run",
+    "JUnit.ServiceDetailsLinkTest.executor": "Run",
     "JUnit.TriangleSquareTest.calculateBySides_invalid.executor": "Run",
     "JUnit.TriangleSquareTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Lesson__8",
+    "git-widget-placeholder": "Lesson__9",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/iliya/IdeaProjects/Aston_study/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",

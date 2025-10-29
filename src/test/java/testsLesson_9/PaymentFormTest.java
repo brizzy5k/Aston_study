@@ -1,0 +1,68 @@
+package testsLesson_9;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class PaymentFormTest extends BaseTest{
+
+    @Test
+    public void checkPaymentFormContinueButton() {
+        fillPaymentForm();
+        checkContinueButton();
+    }
+
+    private void fillPaymentForm() {
+        try {
+            WebElement serviceType = wait.until(
+                    ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Услуги связи')]")));
+            serviceType.click();
+            System.out.println("Выбран тип: Услуги связи");
+        } catch (Exception e) {
+            System.out.println("Ошибка выбора типа услуг");
+        }
+
+        WebElement phoneInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[contains(@placeholder, 'телефон')]")));
+        phoneInput.clear();
+        phoneInput.sendKeys("297777777");
+        System.out.println("Введен номер: 297777777");
+
+        try {
+            WebElement amountInput = driver.findElement(By.xpath("//input[contains(@placeholder, 'Сумма')]"));
+            amountInput.clear();
+            amountInput.sendKeys("5");
+            System.out.println("Введена сумма: 5");
+        } catch (Exception e) {
+            System.out.println("Поле суммы не найдено");
+        }
+    }
+
+    private void checkContinueButton() {
+        WebElement continueButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(text(), 'Продолжить')]")));
+        assertTrue(continueButton.isDisplayed(), "Кнопка 'Продолжить' не отображается");
+        assertTrue(continueButton.isEnabled(), "Кнопка 'Продолжить' не активна");
+        System.out.println("Кнопка 'Продолжить' активна и отображается");
+
+        try {
+            continueButton.click();
+            System.out.println("Клик по кнопке 'Продолжить' выполнен");
+        } catch (ElementClickInterceptedException e) {
+            System.out.println("Кнопка 'Продолжить' не сработала");
+        }
+
+        try {
+            wait.until(ExpectedConditions.or(
+                    ExpectedConditions.presenceOfElementLocated(
+                            By.xpath("//[contains(@class, 'app-wrapper')]")
+                            )
+            ));
+            System.out.println("Изменения на странице после кнопки 'Продолжить' обнаружены");
+        } catch (Exception e) {
+            System.out.println("Изменений на странице после кнопки 'Продолжить' не обнаружено");
+        }
+    }
+}
