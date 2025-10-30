@@ -10,7 +10,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ServiceDetailsLinkTest extends BaseTest {
     @Test
     public void checkServiceDetailsLinkClick() {
-        WebElement detailsLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(), 'Подробнее о сервисе')]")));
+        WebElement detailsLink = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class,'personal')]//a[contains(text(), 'Подробнее о сервисе')]")
+        ));
         assertTrue(detailsLink.isDisplayed(), "Ссылка 'Подробнее о сервисе' не отображается");
         assertEquals("a", detailsLink.getTagName(), "Элемент не является ссылкой");
 

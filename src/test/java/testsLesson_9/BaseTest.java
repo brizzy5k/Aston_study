@@ -21,9 +21,11 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.get("https://www.mts.by");
-        WebElement cookieOkBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Принять')]")));
+        WebElement cookieOkBtn = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//div[contains(@class,'cookie')]//button[contains(text(), 'Принять')]")
+        ));
         cookieOkBtn.click();
         System.out.println("Cookies приняты успешно");
     }

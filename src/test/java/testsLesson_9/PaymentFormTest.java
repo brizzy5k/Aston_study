@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PaymentFormTest extends BaseTest{
-
     @Test
     public void checkPaymentFormContinueButton() {
         fillPaymentForm();
@@ -19,20 +18,26 @@ public class PaymentFormTest extends BaseTest{
     private void fillPaymentForm() {
         try {
             WebElement serviceType = wait.until(
-                    ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Услуги связи')]")));
+                    ExpectedConditions.elementToBeClickable(
+                            By.xpath("//div[contains(@class,'personal')]//*[contains(text(), 'Услуги связи')]")
+                    ));
             serviceType.click();
             System.out.println("Выбран тип: Услуги связи");
         } catch (Exception e) {
             System.out.println("Ошибка выбора типа услуг");
         }
 
-        WebElement phoneInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[contains(@placeholder, 'телефон')]")));
+        WebElement phoneInput = wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("//div[contains(@class,'personal')]//input[contains(@placeholder, 'телефон')]")
+        ));
         phoneInput.clear();
         phoneInput.sendKeys("297777777");
         System.out.println("Введен номер: 297777777");
 
         try {
-            WebElement amountInput = driver.findElement(By.xpath("//input[contains(@placeholder, 'Сумма')]"));
+            WebElement amountInput = driver.findElement(
+                    By.xpath("//div[contains(@class,'personal')]//input[contains(@placeholder, 'Сумма')]")
+            );
             amountInput.clear();
             amountInput.sendKeys("5");
             System.out.println("Введена сумма: 5");
@@ -42,7 +47,9 @@ public class PaymentFormTest extends BaseTest{
     }
 
     private void checkContinueButton() {
-        WebElement continueButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(text(), 'Продолжить')]")));
+        WebElement continueButton = wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("//div[contains(@class,'personal')]//button[contains(text(),'Продолжить')]")
+        ));
         assertTrue(continueButton.isDisplayed(), "Кнопка 'Продолжить' не отображается");
         assertTrue(continueButton.isEnabled(), "Кнопка 'Продолжить' не активна");
         System.out.println("Кнопка 'Продолжить' активна и отображается");
@@ -55,10 +62,8 @@ public class PaymentFormTest extends BaseTest{
         }
 
         try {
-            wait.until(ExpectedConditions.or(
-                    ExpectedConditions.presenceOfElementLocated(
-                            By.xpath("//[contains(@class, 'app-wrapper')]")
-                            )
+            wait.until(ExpectedConditions.presenceOfElementLocated(
+                            By.xpath("//div[contains(@class,'app-wrapper__content ng-tns-c1057872785-0')]")
             ));
             System.out.println("Изменения на странице после кнопки 'Продолжить' обнаружены");
         } catch (Exception e) {
