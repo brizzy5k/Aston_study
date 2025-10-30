@@ -11,12 +11,15 @@ public class GetRequestTest {
     public void testGetRequest() {
         given()
                 .baseUri("https://postman-echo.com")
+                .param("foo1", "bar1")
+                .param("foo2", "bar2")
                 .when()
                 .get("/get?foo1=bar1&foo2=bar2")
                 .then()
                 .log()
                 .body()
                 .statusCode(200)
-                .body("url", equalTo("https://postman-echo.com/get?foo1=bar1&foo2=bar2"));
+                .body("args.foo1", equalTo("bar1"))
+                .body("args.foo2", equalTo("bar2"));
     }
 }
