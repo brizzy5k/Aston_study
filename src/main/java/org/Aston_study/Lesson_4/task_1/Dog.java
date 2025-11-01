@@ -4,24 +4,23 @@ public class Dog extends Animal {
     final int runMaxDistance = 500;
     final int swimMaxDistance = 10;
 
-    public Dog(String name){
-        this.name=name;
+    public Dog(String name) {
+        this.name = name;
         incrementCounters();
     }
 
-    void run(int distance) {
-        if(distance<runMaxDistance) {
+    public void run(int distance) {
+        if (distance < runMaxDistance) {
             System.out.println("Собака " + this.name + " пробежала " + distance + " м");
-        }else{
+        } else {
             System.out.println("Собака " + this.name + "не может пробежать больше " + runMaxDistance + "м");
         }
     }
 
-
-    void swim(int distance) {
-        if(distance<swimMaxDistance) {
+    public void swim(int distance) {
+        if (distance < swimMaxDistance) {
             System.out.println("Собака " + this.name + " проплыла " + distance + " м");
-        }else{
+        } else {
             System.out.println("Собака " + this.name + "не может проплыть больше " + swimMaxDistance + "м");
         }
     }
@@ -30,5 +29,4 @@ public class Dog extends Animal {
         animalCount++;
         dogCount++;
     }
-
 }
