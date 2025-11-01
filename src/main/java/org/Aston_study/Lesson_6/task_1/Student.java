@@ -38,7 +38,7 @@ public class Student {
                 name, group, course, calculateAverageGrade());
     }
 
-    public static void printStudents(Set<Student> students, int course) {
+    public void printStudents(Set<Student> students, int course) {
         System.out.println("Студенты " + course + " курса:");
         boolean found = false;
 
@@ -56,11 +56,11 @@ public class Student {
         System.out.println("");
     }
 
-    public static void removeFailedStudents(Set<Student> students) {
+    public void removeFailedStudents(Set<Student> students) {
         students.removeIf(student -> student.calculateAverageGrade() < 3.0);
     }
 
-    public static void promoteSuccessfulStudents(Set<Student> students) {
+    public void promoteSuccessfulStudents(Set<Student> students) {
         for (Student student : students) {
             if (student.calculateAverageGrade() >= 3.0) {
                 student.promoteToNextCourse();
