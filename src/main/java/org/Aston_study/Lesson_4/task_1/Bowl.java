@@ -4,25 +4,22 @@ public class Bowl {
     int foodCount;
     int bowlId;
 
+    public Bowl(int id, int food) {
+        this.bowlId = id;
+        this.foodCount = food;
+    }
 
-    Bowl(int id, int food){
-        this.bowlId=id;
-        this.foodCount=food;
+    public void fillBowl(int food) {
+        this.foodCount += food;
+        System.out.println("В миску №" + bowlId + " положили " + food + " еды. Теперь в миске: " + foodCount + " еды");
 
     }
 
-    void fillBowl(int food){
-        this.foodCount+=food;
-        System.out.println("В миску №" + bowlId + " положили "+ food + " еды. Теперь в миске: " + foodCount + " еды");
-
-    }
-
-    void checkFoodInBowl(){
-        if (foodCount>0) {
+    public void checkFoodInBowl() {
+        if (foodCount > 0) {
             System.out.println("В миске №" + this.bowlId + ": " + this.foodCount + " еды");
-        }else {
+        } else {
             System.out.println("В миске №" + this.bowlId + ": Нет еды");
         }
     }
-
 }
