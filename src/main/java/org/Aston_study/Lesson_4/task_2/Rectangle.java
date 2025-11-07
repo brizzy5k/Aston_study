@@ -1,16 +1,13 @@
 package org.Aston_study.Lesson_4.task_2;
 
-public class Rectangle implements GeometricFigure {
+public class Rectangle extends GeometryFigure {
     private double height;
     private double width;
-    private String borderColor;
-    private String fillColor;
 
     public Rectangle(double width, double height, String fillColor, String borderColor) {
+        super(fillColor, borderColor);
         this.width = width;
         this.height = height;
-        this.fillColor = fillColor;
-        this.borderColor = borderColor;
     }
 
     @Override
@@ -19,20 +16,9 @@ public class Rectangle implements GeometricFigure {
     }
 
     @Override
-    public String getFillColor() {
-        return fillColor;
-    }
-
-    @Override
-    public String getBorderColor() {
-        return borderColor;
-    }
-
-    @Override
     public double calculatePerimeter() {
-        return 2*(width+height);
+        return 2 * (width + height);
     }
-
 
     public double getWidth() {
         return width;

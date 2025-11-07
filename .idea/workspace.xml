@@ -14,6 +14,17 @@
       <change afterPath="$PROJECT_DIR$/src/test/java/TriangleSquareTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_7/Factorial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_6/task_1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_6/task_1/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_6/task_2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_6/task_2/PhoneDirectory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/CheckMyArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/CheckMyArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/MyArrayDataException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/MyArrayDataException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/MyArraySizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/Lesson_5/MyArraySizeException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +41,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
