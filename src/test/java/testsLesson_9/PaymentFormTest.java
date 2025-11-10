@@ -62,10 +62,14 @@ public class PaymentFormTest extends BaseTest{
         }
 
         try {
+            WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(
+                    By.xpath("//iframe[contains(@class,'bepaid-iframe')]")
+            ));
+            driver.switchTo().frame(iframe);
             wait.until(ExpectedConditions.presenceOfElementLocated(
                             By.xpath("//div[contains(@class,'app-wrapper__content ng-tns-c1057872785-0')]")
             ));
-            System.out.println("Изменения на странице после кнопки 'Продолжить' обнаружены");
+            System.out.println("Переключение на iframe 'bepaid-iframe' произошло успешно");
         } catch (Exception e) {
             System.out.println("Изменений на странице после кнопки 'Продолжить' не обнаружено");
         }
