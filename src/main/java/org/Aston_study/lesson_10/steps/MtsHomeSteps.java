@@ -142,4 +142,68 @@ public class MtsHomeSteps {
             System.out.println("Iframe 'bepaid-iframe' не найден");
         }
     }
+
+    public String getServiceInfo() {
+        return mtsPage.getServiceInfo();
+    }
+
+    public String getPaymentButtonAmountText() {
+        return mtsPage.getPaymentButtonAmountText();
+    }
+
+    public boolean isCardNumberLabelDisplayed() {
+        return mtsPage.isCardNumberLabelDisplayed();
+    }
+
+    public boolean isCardExpiryLabelDisplayed() {
+        return mtsPage.isCardExpiryLabelDisplayed();
+    }
+
+    public boolean isCardCvcLabelDisplayed() {
+        return mtsPage.isCardCvcLabelDisplayed();
+    }
+
+    public boolean isCardHolderLabelDisplayed() {
+        return mtsPage.isCardHolderLabelDisplayed();
+    }
+
+    public String getCardNumberLabelText() {
+        return mtsPage.getCardNumberLabelText();
+    }
+
+    public String getCardExpiryLabelText() {
+        return mtsPage.getCardExpiryLabelText();
+    }
+
+    public String getCardCvcLabelText() {
+        return mtsPage.getCardCvcLabelText();
+    }
+
+    public String getCardHolderLabelText() {
+        return mtsPage.getCardHolderLabelText();
+    }
+
+    public int getPaymentIconsCount() {
+        return mtsPage.getPaymentIconsCount();
+    }
+
+    public boolean isVisaIconDisplayed() {
+        return mtsPage.isVisaIconDisplayed();
+    }
+
+    public boolean isMastercardIconDisplayed() {
+        return mtsPage.isMastercardIconDisplayed();
+    }
+
+    public boolean isBelkartIconDisplayed() {
+        return mtsPage.isBelkartIconDisplayed();
+    }
+
+    public boolean isMaestroIconDisplayed() {
+        return mtsPage.isMaestroIconDisplayed();
+    }
+
+    public boolean isMirIconDisplayed() {
+        return mtsPage.isMirIconDisplayed();
+    }
 }

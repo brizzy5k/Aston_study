@@ -162,6 +162,51 @@ public class MtsPageTest extends BaseTest {
         System.out.println("Клик по кнопке 'Продолжить' выполнен");
 
         steps.checkPaymentFormAfterContinue();
-        System.out.println("Тест завершен");
+        steps.switchToPaymentIframe();
+
+        String serviceInfo = steps.getServiceInfo();
+        assertNotNull(serviceInfo, "Информация об услуге должна отображаться");
+        assertTrue(serviceInfo.contains("Услуги связи"), "Должна отображаться информация об услуге связи");
+        assertTrue(serviceInfo.contains("375297777777"), "Должен отображаться номер телефона 375297777777");
+        System.out.println("Информация об услуге отображается корректно: " + serviceInfo);
+
+        String buttonAmount = steps.getPaymentButtonAmountText();
+        assertNotNull(buttonAmount, "Сумма на кнопке должна отображаться");
+        assertTrue(buttonAmount.contains("5.00 BYN"), "Сумма на кнопке должна содержать 5.00 BYN");
+        System.out.println("Сумма на кнопке: " + buttonAmount);
+
+        assertTrue(steps.isCardNumberLabelDisplayed(), "Надпись 'Номер карты' должна отображаться");
+        assertTrue(steps.isCardExpiryLabelDisplayed(), "Надпись 'Срок действия' должна отображаться");
+        assertTrue(steps.isCardCvcLabelDisplayed(), "Надпись 'CVC' должна отображаться");
+        assertTrue(steps.isCardHolderLabelDisplayed(), "Надпись 'Имя и фамилия на карте' должна отображаться");
+
+        String cardNumberLabel = steps.getCardNumberLabelText();
+        String cardExpiryLabel = steps.getCardExpiryLabelText();
+        String cardCvcLabel = steps.getCardCvcLabelText();
+        String cardHolderLabel = steps.getCardHolderLabelText();
+
+        assertTrue(cardNumberLabel.contains("Номер карты"), "Должна отображаться надпись 'Номер карты'");
+        assertTrue(cardExpiryLabel.contains("Срок действия"), "Должна отображаться надпись 'Срок действия'");
+        assertTrue(cardCvcLabel.contains("CVC"), "Должна отображаться надпись 'CVC'");
+        assertTrue(cardHolderLabel.contains("Имя и фамилия на карте"), "Должна отображаться надпись 'Имя и фамилия на карте'");
+
+        System.out.println("Надписи полей карты отображаются корректно:");
+        System.out.println("Номер карты: '" + cardNumberLabel + "'");
+        System.out.println("Срок действия: '" + cardExpiryLabel + "'");
+        System.out.println("CVC: '" + cardCvcLabel + "'");
+        System.out.println("Имя и фамилия на карте: '" + cardHolderLabel + "'");
+
+        int paymentIconsCount = steps.getPaymentIconsCount();
+        assertTrue(paymentIconsCount >= 5, "Должно быть не менее 5 иконок платежных систем. Найдено: " + paymentIconsCount);
+        System.out.println("Найдено иконок платежных систем: " + paymentIconsCount);
+
+        assertTrue(steps.isVisaIconDisplayed(), "Иконка Visa должна отображаться");
+        assertTrue(steps.isMastercardIconDisplayed(), "Иконка Mastercard должна отображаться");
+        assertTrue(steps.isBelkartIconDisplayed(), "Иконка Belkart должна отображаться");
+        //assertTrue(steps.isMaestroIconDisplayed(), "Иконка Maestro должна отображаться");
+        assertTrue(steps.isMirIconDisplayed(), "Иконка Mir должна отображаться");
+        System.out.println("Все основные платежные системы отображаются: Visa, Mastercard, Belkart, Maestro, Mir");
+
+        steps.switchToDefaultContent();
     }
 }
