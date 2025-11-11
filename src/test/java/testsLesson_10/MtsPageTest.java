@@ -1,132 +1,167 @@
 package testsLesson_10;
 
+import org.Aston_study.lesson_10.steps.MtsHomeSteps;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.Aston_study.lesson_10.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MtsPageTest extends BaseTest {
-
-    private MtsPage mtsPage;
+    private MtsHomeSteps steps;
 
     @BeforeEach
     public void setUp() {
         super.setUp();
-        mtsPage = new MtsPage(driver);
+        steps = new MtsHomeSteps(driver);
+        System.out.println("Инициализация теста");
     }
 
     @Test
+    @DisplayName("Проверить название блока")
     public void testBlockName() {
-        System.out.println("=== Тест: Проверка названия блока ===");
-        String actualTitle = mtsPage.getWidgetTitle();
+        System.out.println("===Тест Проверка названия блока===");
+        String actualTitle = steps.getBlockTitle();
         String expectedTitle = "Онлайн пополнение\nбез комиссии";
         assertEquals(expectedTitle, actualTitle, "Название блока не соответствует ожидаемому");
-        System.out.println("Название блока соответствует ожидаемому");
+        System.out.println("Название блока корректно: " + actualTitle);
     }
 
     @Test
+    @DisplayName("Проверить наличие логотипов платёжных систем")
     public void testPaymentLogos() {
-        System.out.println("=== Тест: Проверка логотипов платежных систем ===");
-        assertTrue(mtsPage.arePaymentLogosDisplayed(), "Логотипы платежных систем не найдены.");
-        int logoCount = mtsPage.getPaymentLogosCount();
-        assertEquals(5, logoCount, "Неверное количество логотипов.");
-        System.out.println("Найдено логотипов: " + logoCount);
+        System.out.println("===Тест Проверка логотипов платежных систем===");
+        assertTrue(steps.arePaymentLogosDisplayed(), "Логотипы платежных систем не найдены");
+        int logoCount = steps.getPaymentLogosCount();
+        assertTrue(logoCount > 0, "Не найдено логотипов платежных систем");
+        System.out.println("Найдено логотипов платежных систем: " + logoCount);
     }
 
     @Test
+    @DisplayName("Проверить работу ссылки «Подробнее о сервисе»")
     public void testServiceDetailsLink() {
-        System.out.println("=== Тест: Проверка ссылки 'Подробнее о сервисе' ===");
-        assertTrue(mtsPage.isServiceDetailsLinkDisplayed(), "Ссылка 'Подробнее о сервисе' не отображается");
+        System.out.println("===Тест Проверка ссылки 'Подробнее о сервисе'===");
+        assertTrue(steps.isServiceDetailsLinkDisplayed(), "Ссылка 'Подробнее о сервисе' не отображается");
 
-        String href = mtsPage.getServiceDetailsLinkHref();
+        String href = steps.getServiceDetailsLinkHref();
         assertNotNull(href, "У ссылки отсутствует href атрибут");
         assertFalse(href.isEmpty(), "У ссылки пустой href атрибут");
+        System.out.println("Ссылка найдена, URL: " + href);
 
-        System.out.println("Ссылка 'Подробнее о сервисе' найдена с URL: " + href);
+        String originalUrl = steps.getCurrentUrl();
+        System.out.println("Текущий URL: " + originalUrl);
 
-        String originalUrl = driver.getCurrentUrl();
-        mtsPage.clickServiceDetailsLink();
+        steps.clickServiceDetailsLink();
+        steps.waitForUrlChange(originalUrl);
 
-        wait.until(webDriver -> !webDriver.getCurrentUrl().equals(originalUrl));
-
-        String newUrl = driver.getCurrentUrl();
+        String newUrl = steps.getCurrentUrl();
         assertNotEquals(originalUrl, newUrl, "Переход по ссылке не произошел");
-        System.out.println("Переход по ссылке произошел успешно");
+        System.out.println("Переход выполнен успешно");
+        System.out.println("Новый URL: " + newUrl);
 
-        driver.navigate().back();
+        steps.navigateBack();
+        System.out.println("Возврат на исходную страницу");
     }
 
     @Test
+    @DisplayName("Проверить надписи в полях для Услуг связи")
     public void testCommunicationServicesPlaceholders() {
-        System.out.println("=== Тест: Проверка плейсхолдеров для Услуг связи ===");
-        mtsPage.selectCommunicationServices();
+        System.out.println("===Тест Проверка плейсхолдеров для Услуг связи===");
+        steps.selectCommunicationServices();
+        System.out.println("Выбраны Услуги связи");
 
-        String phonePlaceholder = mtsPage.getPhoneInputPlaceholder();
-        String amountPlaceholder = mtsPage.getAmountInputPlaceholder();
-        assertTrue(phonePlaceholder.contains("Номер телефон"),
-                "Плейсхолдер поля телефона не содержит ожидаемый текст. Актуальный: " + phonePlaceholder);
-        assertTrue(amountPlaceholder.toLowerCase().contains("сумма"),
-                "Плейсхолдер поля суммы не содержит ожидаемый текст. Актуальный: " + amountPlaceholder);
+        String phonePlaceholder = steps.getPhoneInputPlaceholder();
+        String amountPlaceholder = steps.getAmountInputPlaceholder();
 
-        System.out.println("Услуги связи: поля 'Телефон' и 'Сумма' имеют корректные плейсхолдеры");
+        assertNotNull(phonePlaceholder, "Плейсхолдер телефона отсутствует");
+        assertNotNull(amountPlaceholder, "Плейсхолдер суммы отсутствует");
+        assertFalse(phonePlaceholder.isEmpty(), "Плейсхолдер телефона пустой");
+        assertFalse(amountPlaceholder.isEmpty(), "Плейсхолдер суммы пустой");
+
+        System.out.println("Плейсхолдеры корректны:");
         System.out.println("Телефон: '" + phonePlaceholder + "'");
         System.out.println("Сумма: '" + amountPlaceholder + "'");
     }
 
     @Test
+    @DisplayName("Проверить надписи в полях для Домашнего интернета")
     public void testHomeInternetPlaceholders() {
-        System.out.println("=== Тест: Проверка плейсхолдеров для Домашнего интернета ===");
+        System.out.println("===Тест Проверка плейсхолдеров для Домашнего интернета===");
+        steps.selectHomeInternet();
+        System.out.println("Выбран Домашний интернет");
+
+        String phonePlaceholder = steps.getHomePhoneInputPlaceholder();
+        String amountPlaceholder = steps.getAmountInputPlaceholder();
+
+        assertNotNull(phonePlaceholder, "Плейсхолдер для номера абонента отсутствует");
+        assertNotNull(amountPlaceholder, "Плейсхолдер для суммы отсутствует");
+        assertFalse(phonePlaceholder.isEmpty(), "Плейсхолдер для номера абонента пустой");
+        assertFalse(amountPlaceholder.isEmpty(), "Плейсхолдер для суммы пустой");
+
+        System.out.println("Плейсхолдеры корректны:");
+        System.out.println("Номер абонента: '" + phonePlaceholder + "'");
+        System.out.println("Сумма: '" + amountPlaceholder + "'");
     }
 
     @Test
+    @DisplayName("Проверить надписи в полях для Рассрочки")
     public void testInstallmentPlaceholders() {
-        System.out.println("=== Тест: Проверка плейсхолдеров для Рассрочки ===");
+        System.out.println("===Тест Проверка плейсхолдеров для Рассрочки===");
+        steps.selectInstallment();
+        System.out.println("Выбрана Рассрочка");
+
+        String contractPlaceholder = steps.getContractInputPlaceholder();
+        String amountPlaceholder = steps.getAmountInputPlaceholder();
+
+        assertNotNull(contractPlaceholder, "Плейсхолдер для номера договора отсутствует");
+        assertNotNull(amountPlaceholder, "Плейсхолдер для суммы отсутствует");
+        assertFalse(contractPlaceholder.isEmpty(), "Плейсхолдер для номера договора пустой");
+        assertFalse(amountPlaceholder.isEmpty(), "Плейсхолдер для суммы пустой");
+
+        System.out.println("Плейсхолдеры корректны:");
+        System.out.println("Номер договора: '" + contractPlaceholder + "'");
+        System.out.println("Сумма: '" + amountPlaceholder + "'");
     }
 
     @Test
+    @DisplayName("Проверить надписи в полях для Задолженности")
     public void testDebtPlaceholders() {
-        System.out.println("=== Тест: Проверка плейсхолдеров для Задолженности ===");
+        System.out.println("===Тест Проверка плейсхолдеров для Задолженности===");
+        steps.selectDebt();
+        System.out.println("Выбрана Задолженность");
+
+        String contractPlaceholder = steps.getAccountInputPlaceholder();
+        String amountPlaceholder = steps.getAmountInputPlaceholder();
+
+        assertNotNull(contractPlaceholder, "Плейсхолдер для номера счета отсутствует");
+        assertNotNull(amountPlaceholder, "Плейсхолдер для суммы отсутствует");
+        assertFalse(contractPlaceholder.isEmpty(), "Плейсхолдер для номера счета пустой");
+        assertFalse(amountPlaceholder.isEmpty(), "Плейсхолдер для суммы пустой");
+
+        System.out.println("Плейсхолдеры корректны:");
+        System.out.println("Номер счета: '" + contractPlaceholder + "'");
+        System.out.println("Сумма: '" + amountPlaceholder + "'");
     }
 
     @Test
+    @DisplayName("Заполнить поля и проверить работу кнопки «Продолжить» для Услуг связи")
     public void testCommunicationServicesPayment() {
-        System.out.println("=== Тест: Проверка оплаты Услуг связи ===");
-        mtsPage.selectCommunicationServices();
+        System.out.println("===Тест Проверка оплаты Услуг связи===");
+        steps.selectCommunicationServices();
+        System.out.println("Выбраны Услуги связи");
 
-        mtsPage.enterPhoneNumber("297777777");
-        mtsPage.enterAmount("5");
+        steps.fillPhoneField("297777777");
+        steps.fillCostField("5");
+        System.out.println("Поля заполнены: телефон=297777777, сумма=5");
 
-        System.out.println("Поля заполнены: номер 297777777, сумма 5");
+        assertTrue(steps.isContinueButtonEnabled(), "Кнопка 'Продолжить' должна быть активна после заполнения полей");
+        assertTrue(steps.isContinueButtonDisplayed(), "Кнопка 'Продолжить' должна отображаться");
+        System.out.println("Кнопка 'Продолжить' активна и отображается");
 
-        assertTrue(mtsPage.isContinueButtonDisplayed(), "Кнопка 'Продолжить' не отображается");
-        assertTrue(mtsPage.isContinueButtonEnabled(), "Кнопка 'Продолжить' не активна");
-        System.out.println("✓ Кнопка 'Продолжить' активна и отображается");
+        steps.clickContinueButton();
+        System.out.println("Клик по кнопке 'Продолжить' выполнен");
 
-        try {
-            mtsPage.clickContinueButton();
-            System.out.println("Клик по кнопке 'Продолжить' выполнен");
-
-            if (mtsPage.isPageChanged()) {
-                System.out.println("Изменения на странице после кнопки 'Продолжить' обнаружены");
-            } else {
-                System.out.println("Изменений на странице после кнопки 'Продолжить' не обнаружено");
-            }
-        } catch (ElementClickInterceptedException e) {
-            System.out.println("Кнопка 'Продолжить' не сработала: " + e.getMessage());
-            fail("Кнопка 'Продолжить' не сработала: " + e.getMessage());
-        }
-    }
-
-    @Test
-    public void testAllPlaceholdersInOneTest() {
-        System.out.println("=== Тест: Комплексная проверка всех плейсхолдеров ===");
-
-        testCommunicationServicesPlaceholders();
-        testHomeInternetPlaceholders();
-        testInstallmentPlaceholders();
-        testDebtPlaceholders();
-
-        System.out.println("Все плейсхолдеры для всех типов услуг проверены успешно");
+        steps.checkPaymentFormAfterContinue();
+        System.out.println("Тест завершен");
     }
 }

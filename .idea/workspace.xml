@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="Убрал статические методы">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/MtsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_10/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_10/MtsPageTest.java" afterDir="false" />
+    <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="добавил переключение на iframe">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/driver/SeleniumDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/steps/MtsHomeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/MtsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/page/MtsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsLesson_10/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_10/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testsLesson_10/MtsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_10/MtsPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,11 @@
     "JUnit.FactorialTest.executor": "Run",
     "JUnit.GetRequestTest.executor": "Run",
     "JUnit.MtsPageTest.executor": "Run",
+    "JUnit.MtsPageTest.testCommunicationServicesPayment.executor": "Run",
     "JUnit.MtsPageTest.testCommunicationServicesPlaceholders.executor": "Run",
+    "JUnit.MtsPageTest.testDebtPlaceholders.executor": "Run",
+    "JUnit.MtsPageTest.testHomeInternetPlaceholders.executor": "Run",
+    "JUnit.MtsPageTest.testInstallmentPlaceholders.executor": "Run",
     "JUnit.NumberComparatorTest.executor": "Run",
     "JUnit.OnlineReplenishmentTest.executor": "Run",
     "JUnit.PatchRequestTest.executor": "Run",
@@ -116,7 +122,23 @@
       <recent name="org.Aston_study.Lesson_5" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MtsPageTest.testCommunicationServicesPlaceholders">
+  <component name="RunManager">
+    <configuration name="MtsPageTest.testCommunicationServicesPayment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Aston_study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testsLesson_10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testsLesson_10" />
+      <option name="MAIN_CLASS_NAME" value="testsLesson_10.MtsPageTest" />
+      <option name="METHOD_NAME" value="testCommunicationServicesPayment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MtsPageTest.testCommunicationServicesPlaceholders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aston_study" />
       <extension name="coverage">
@@ -133,11 +155,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleSquareTest.calculateBySides_invalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MtsPageTest.testDebtPlaceholders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aston_study" />
-      <option name="PACKAGE_NAME" value="testsLesson_8" />
-      <option name="MAIN_CLASS_NAME" value="testsLesson_7.TriangleSquareTest" />
-      <option name="METHOD_NAME" value="calculateBySides_invalid" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testsLesson_10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testsLesson_10" />
+      <option name="MAIN_CLASS_NAME" value="testsLesson_10.MtsPageTest" />
+      <option name="METHOD_NAME" value="testDebtPlaceholders" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MtsPageTest.testHomeInternetPlaceholders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Aston_study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testsLesson_10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testsLesson_10" />
+      <option name="MAIN_CLASS_NAME" value="testsLesson_10.MtsPageTest" />
+      <option name="METHOD_NAME" value="testHomeInternetPlaceholders" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MtsPageTest.testInstallmentPlaceholders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Aston_study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testsLesson_10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testsLesson_10" />
+      <option name="MAIN_CLASS_NAME" value="testsLesson_10.MtsPageTest" />
+      <option name="METHOD_NAME" value="testInstallmentPlaceholders" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,10 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MtsPageTest.testInstallmentPlaceholders" />
+        <item itemvalue="JUnit.MtsPageTest.testHomeInternetPlaceholders" />
+        <item itemvalue="JUnit.MtsPageTest.testDebtPlaceholders" />
+        <item itemvalue="JUnit.MtsPageTest.testCommunicationServicesPayment" />
         <item itemvalue="JUnit.MtsPageTest.testCommunicationServicesPlaceholders" />
-        <item itemvalue="JUnit.TriangleSquareTest.calculateBySides_invalid" />
-        <item itemvalue="JUnit.TriangleSquareTest.calculateBySides_invalid" />
-        <item itemvalue="JUnit.TriangleSquareTest.calculateBySides_invalid" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761786950119</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="добавил переключение на iframe">
+      <option name="closed" value="true" />
+      <created>1762748913234</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762748913234</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +263,7 @@
     <MESSAGE value="Lesson_3 start commit" />
     <MESSAGE value="Еще пару пробелов лишних убрал" />
     <MESSAGE value="Поменял логику testGetRequest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поменял логику testGetRequest" />
+    <MESSAGE value="добавил переключение на iframe" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил переключение на iframe" />
   </component>
 </project>
