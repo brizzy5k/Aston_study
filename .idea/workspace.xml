@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a50b08e-a647-478c-b87c-dc48a0ea8e38" name="Changes" comment="Что-то сделал, не получается поймать placeholder 'Сумма'">
+      <change afterPath="$PROJECT_DIR$/src/test/java/testsLesson_10/AllureTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/page/MtsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/page/MtsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/steps/MtsHomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Aston_study/lesson_10/steps/MtsHomeSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testsLesson_10/MtsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testsLesson_10/MtsPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,53 +67,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ArithmeticOperations.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CatsArrayAndBowl.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Factorial.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.NumberComparator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TriangleSquare.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WebDriverExample.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArithmeticOperationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CheckTheBlockNameTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ChromeTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DeleteRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FactorialTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GetRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MtsPageTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MtsPageTest.testCommunicationServicesPayment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MtsPageTest.testCommunicationServicesPlaceholders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MtsPageTest.testDebtPlaceholders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MtsPageTest.testHomeInternetPlaceholders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MtsPageTest.testInstallmentPlaceholders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.NumberComparatorTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OnlineReplenishmentTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PatchRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentFormTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PaymentLogosTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostFormDataRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostRawTextRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PutRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ServiceDetailsLinkTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TriangleSquareTest.calculateBySides_invalid.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TriangleSquareTest.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lesson__10&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/iliya/IdeaProjects/Aston_study/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ArithmeticOperations.executor": "Run",
+    "Application.CatsArrayAndBowl.executor": "Run",
+    "Application.Factorial.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Main2.executor": "Run",
+    "Application.NumberComparator.executor": "Run",
+    "Application.TriangleSquare.executor": "Run",
+    "Application.WebDriverExample.executor": "Run",
+    "JUnit.AllureTest.executor": "Run",
+    "JUnit.ArithmeticOperationTest.executor": "Run",
+    "JUnit.CheckTheBlockNameTest.executor": "Run",
+    "JUnit.ChromeTest.executor": "Run",
+    "JUnit.DeleteRequestTest.executor": "Run",
+    "JUnit.FactorialTest.executor": "Run",
+    "JUnit.GetRequestTest.executor": "Run",
+    "JUnit.MtsPageTest.executor": "Run",
+    "JUnit.MtsPageTest.testCommunicationServicesPayment.executor": "Run",
+    "JUnit.MtsPageTest.testCommunicationServicesPlaceholders.executor": "Run",
+    "JUnit.MtsPageTest.testDebtPlaceholders.executor": "Run",
+    "JUnit.MtsPageTest.testHomeInternetPlaceholders.executor": "Run",
+    "JUnit.MtsPageTest.testInstallmentPlaceholders.executor": "Run",
+    "JUnit.NumberComparatorTest.executor": "Run",
+    "JUnit.OnlineReplenishmentTest.executor": "Run",
+    "JUnit.PatchRequestTest.executor": "Run",
+    "JUnit.PaymentFormTest.executor": "Run",
+    "JUnit.PaymentLogosTest.executor": "Run",
+    "JUnit.PostFormDataRequestTest.executor": "Run",
+    "JUnit.PostRawTextRequestTest.executor": "Run",
+    "JUnit.PostRequestTest.executor": "Run",
+    "JUnit.PutRequestTest.executor": "Run",
+    "JUnit.ServiceDetailsLinkTest.executor": "Run",
+    "JUnit.TriangleSquareTest.calculateBySides_invalid.executor": "Run",
+    "JUnit.TriangleSquareTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#10 on Lesson__10",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/iliya/IdeaProjects/Aston_study/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.Aston_study.Lesson_5" />
