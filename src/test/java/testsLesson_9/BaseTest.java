@@ -9,12 +9,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
 public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
+    protected final Logger logger = LoggerFactory.getLogger(BaseTest.class);
 
     @BeforeEach
     public void setUp() {
@@ -27,7 +30,7 @@ public class BaseTest {
                 By.xpath("//div[contains(@class,'cookie')]//button[contains(text(), 'Принять')]")
         ));
         cookieOkBtn.click();
-        System.out.println("Cookies приняты успешно");
+        logger.info("Cookies приняты успешно");
     }
 
     @AfterEach

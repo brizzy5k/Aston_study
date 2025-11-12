@@ -5,10 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PaymentFormTest extends BaseTest{
+    private final Logger logger = LoggerFactory.getLogger(PaymentFormTest.class);
+
     @Test
     public void checkPaymentFormContinueButton() {
         fillPaymentForm();
@@ -22,9 +26,9 @@ public class PaymentFormTest extends BaseTest{
                             By.xpath("//div[contains(@class,'personal')]//*[contains(text(), 'Услуги связи')]")
                     ));
             serviceType.click();
-            System.out.println("Выбран тип: Услуги связи");
+            logger.info("Выбран тип: Услуги связи");
         } catch (Exception e) {
-            System.out.println("Ошибка выбора типа услуг");
+            logger.error("Ошибка выбора типа услуг", e);
         }
 
         WebElement phoneInput = wait.until(ExpectedConditions.presenceOfElementLocated(
@@ -32,7 +36,7 @@ public class PaymentFormTest extends BaseTest{
         ));
         phoneInput.clear();
         phoneInput.sendKeys("297777777");
-        System.out.println("Введен номер: 297777777");
+        logger.info("Введен номер: 297777777");
 
         try {
             WebElement amountInput = driver.findElement(
@@ -40,9 +44,9 @@ public class PaymentFormTest extends BaseTest{
             );
             amountInput.clear();
             amountInput.sendKeys("5");
-            System.out.println("Введена сумма: 5");
+            logger.info("Введена сумма: 5");
         } catch (Exception e) {
-            System.out.println("Поле суммы не найдено");
+            logger.error("Поле суммы не найдено", e);
         }
     }
 
@@ -52,13 +56,13 @@ public class PaymentFormTest extends BaseTest{
         ));
         assertTrue(continueButton.isDisplayed(), "Кнопка 'Продолжить' не отображается");
         assertTrue(continueButton.isEnabled(), "Кнопка 'Продолжить' не активна");
-        System.out.println("Кнопка 'Продолжить' активна и отображается");
+        logger.info("Кнопка 'Продолжить' активна и отображается");
 
         try {
             continueButton.click();
-            System.out.println("Клик по кнопке 'Продолжить' выполнен");
+            logger.info("Клик по кнопке 'Продолжить' выполнен");
         } catch (ElementClickInterceptedException e) {
-            System.out.println("Кнопка 'Продолжить' не сработала");
+            logger.error("Кнопка 'Продолжить' не сработала", e);
         }
 
         try {
@@ -67,11 +71,11 @@ public class PaymentFormTest extends BaseTest{
             ));
             driver.switchTo().frame(iframe);
             wait.until(ExpectedConditions.presenceOfElementLocated(
-                            By.xpath("//div[contains(@class,'app-wrapper__content ng-tns-c1057872785-0')]")
+                    By.xpath("//div[contains(@class,'app-wrapper__content ng-tns-c1057872785-0')]")
             ));
-            System.out.println("Переключение на iframe 'bepaid-iframe' произошло успешно");
+            logger.info("Переключение на iframe 'bepaid-iframe' произошло успешно");
         } catch (Exception e) {
-            System.out.println("Изменений на странице после кнопки 'Продолжить' не обнаружено");
+            logger.error("Изменений на странице после кнопки 'Продолжить' не обнаружено", e);
         }
     }
 }

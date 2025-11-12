@@ -4,10 +4,14 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ServiceDetailsLinkTest extends BaseTest {
+    private final Logger logger = LoggerFactory.getLogger(ServiceDetailsLinkTest.class);
+
     @Test
     public void checkServiceDetailsLinkClick() {
         WebElement detailsLink = wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -20,7 +24,7 @@ public class ServiceDetailsLinkTest extends BaseTest {
         assertNotNull(href, "У ссылки отсутствует href атрибут");
         assertFalse(href.isEmpty(), "У ссылки пустой href атрибут");
 
-        System.out.println("Ссылка '" + detailsLink.getText() + "' найдена.\nURL ссылки: " + href);
+        logger.info("Ссылка '" + detailsLink.getText() + "' найдена.\nURL ссылки: " + href);
 
         String originalUrl = driver.getCurrentUrl();
         detailsLink.click();
@@ -29,6 +33,6 @@ public class ServiceDetailsLinkTest extends BaseTest {
         String newUrl = driver.getCurrentUrl();
         assertNotEquals(originalUrl, newUrl, "Переход по ссылке не произошел");
 
-        System.out.println("Переход по ссылке произошел успешено");
+        logger.info("Переход по ссылке произошел успешено");
     }
 }
