@@ -14,12 +14,7 @@ public class PaymentFormTest extends BaseTest{
     private final Logger logger = LoggerFactory.getLogger(PaymentFormTest.class);
 
     @Test
-    public void checkPaymentFormContinueButton() {
-        fillPaymentForm();
-        checkContinueButton();
-    }
-
-    private void fillPaymentForm() {
+    public void checkPaymentFormTest() {
         try {
             WebElement serviceType = wait.until(
                     ExpectedConditions.elementToBeClickable(
@@ -29,6 +24,7 @@ public class PaymentFormTest extends BaseTest{
             logger.info("Выбран тип: Услуги связи");
         } catch (Exception e) {
             logger.error("Ошибка выбора типа услуг", e);
+            fail("Не удалось выбрать тип услуг");
         }
 
         WebElement phoneInput = wait.until(ExpectedConditions.presenceOfElementLocated(
@@ -47,35 +43,51 @@ public class PaymentFormTest extends BaseTest{
             logger.info("Введена сумма: 5");
         } catch (Exception e) {
             logger.error("Поле суммы не найдено", e);
+            fail("Не удалось ввести сумму");
         }
-    }
 
-    private void checkContinueButton() {
         WebElement continueButton = wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//div[contains(@class,'personal')]//button[contains(text(),'Продолжить')]")
         ));
-        assertTrue(continueButton.isDisplayed(), "Кнопка 'Продолжить' не отображается");
-        assertTrue(continueButton.isEnabled(), "Кнопка 'Продолжить' не активна");
-        logger.info("Кнопка 'Продолжить' активна и отображается");
+        wait.until(ExpectedConditions.visibilityOf(continueButton));
+        logger.info("Кнопка 'Продолжить' отображается");
+        wait.until(ExpectedConditions.elementToBeClickable(continueButton));
+        logger.info("Кнопка 'Продолжить' активна");
 
         try {
             continueButton.click();
             logger.info("Клик по кнопке 'Продолжить' выполнен");
         } catch (ElementClickInterceptedException e) {
             logger.error("Кнопка 'Продолжить' не сработала", e);
+            fail("Не удалось кликнуть по кнопке 'Продолжить'");
         }
+
+        boolean isServiceInfoFound = false;
+        String foundText = "";
 
         try {
             WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(
                     By.xpath("//iframe[contains(@class,'bepaid-iframe')]")
             ));
             driver.switchTo().frame(iframe);
-            wait.until(ExpectedConditions.presenceOfElementLocated(
-                    By.xpath("//div[contains(@class,'app-wrapper__content ng-tns-c1057872785-0')]")
-            ));
             logger.info("Переключение на iframe 'bepaid-iframe' произошло успешно");
+
+            WebElement uniqueInfoElement = wait.until(ExpectedConditions.presenceOfElementLocated(
+                    By.xpath("//*[contains(text(), 'Оплата: Услуги связи') and contains(text(), 'Номер:375297777777')]")
+            ));
+            wait.until(ExpectedConditions.visibilityOf(uniqueInfoElement));
+            isServiceInfoFound = true;
+            foundText = uniqueInfoElement.getText();
+            logger.info("Найдена уникальная информация: '{}'", foundText);
+
         } catch (Exception e) {
-            logger.error("Изменений на странице после кнопки 'Продолжить' не обнаружено", e);
+            logger.error("Уникальная информация не найдена в iframe", e);
+        } finally {
+            driver.switchTo().defaultContent();
         }
+
+        assertTrue(isServiceInfoFound,
+                "Не найдена уникальная информация в iframe. " +
+                        "Ожидалось: 'Оплата: Услуги связи Номер:375297777777'");
     }
 }
