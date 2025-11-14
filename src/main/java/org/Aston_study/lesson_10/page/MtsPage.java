@@ -5,6 +5,8 @@
     import org.openqa.selenium.WebElement;
     import org.openqa.selenium.support.ui.ExpectedConditions;
     import org.openqa.selenium.support.ui.WebDriverWait;
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
 
     import java.time.Duration;
     import java.util.List;
@@ -12,6 +14,7 @@
     public class MtsPage {
         protected WebDriver driver;
         protected WebDriverWait wait;
+        private final Logger log = LoggerFactory.getLogger(MtsPage.class);
 
         private final By widgetTitle = By.xpath("//div[contains(@class,'pay__wrapper')]//h2[contains(text(), 'Онлайн пополнение')]");
         private final By paymentLogos = By.cssSelector(".pay__partners img");
@@ -92,9 +95,9 @@
             try {
                 WebElement cookieBtn = wait.until(ExpectedConditions.elementToBeClickable(cookieAcceptButton));
                 cookieBtn.click();
-                System.out.println("Cookies приняты успешно");
+                log.info("Cookies приняты успешно");
             } catch (Exception e) {
-                System.out.println("Куки-баннер не найден или уже закрыт");
+                log.debug("Куки-баннер не найден или уже закрыт: {}", e.getMessage());
             }
         }
 
@@ -217,7 +220,6 @@
                 return findElement(paymentBtn).getText();
             } catch (Exception e) {
                 return "";
-
             }
         }
 
